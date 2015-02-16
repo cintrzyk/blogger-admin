@@ -3,11 +3,7 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var pickFiles = require('broccoli-static-compiler');
 
-var app = new EmberApp({
-  'ember-cli-bootstrap-sass': {
-    'importBootstrapJS': true
-  }
-});
+var app = new EmberApp();
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
@@ -29,8 +25,19 @@ var fontAwesome = pickFiles('bower_components/font-awesome', {
   destDir: '/'
 });
 
+app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', {
+  destDir: 'assets'
+});
+var bootstrapFonts = pickFiles('bower_components/bootstrap/dist/fonts', {
+  srcDir: '/',
+  files: ['fonts/*'],
+  destDir: '/'
+});
+
 app.import('vendor/admin-lte.css');
 app.import('vendor/admin-lte-blue.css');
 app.import('vendor/admin-lte.js');
 
-module.exports = app.toTree(fontAwesome);
+module.exports = app.toTree(fontAwesome, bootstrapFonts);
