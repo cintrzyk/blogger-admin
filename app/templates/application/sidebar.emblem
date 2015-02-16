@@ -1,0 +1,7 @@
+.user-panel
+  .pull-left.image
+    img.img-circle alt='user image' src='http://graph.facebook.com/711612498881201/picture?height=90&type=square&width=90'
+  .pull-left.info
+    p Alexander Pierce
+    a href='#'
+      i.fa.fa-circle.text-success  Online

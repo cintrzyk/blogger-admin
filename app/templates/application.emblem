@@ -1,2 +1,30 @@
-h2#title Welcome to Ember.js
-= outlet
+header.main-header
+  = link-to 'index' class='logo' | <b>Blogger</b> Admin
+  = render 'application/navbar'
+%aside.main-sidebar
+  section.sidebar
+    = partial 'application/sidebar'
+
+.content-wrapper
+  section.content-header
+    h1
+      | Dashboard
+      small Control panel
+    ol.breadcrumb
+      li
+        a href="#"
+          i.fa.fa-dashboard  Home
+      li.active Dashboard
+
+  section.content
+    .row
+      .col-lg-3.col-xs-6
+        .small-box.bg-aqua
+          .inner
+            %h3 0
+            %p New Blogs
+          .icon
+            i.ion.ion-bag
+          a.small-box-footer href="#"
+            ' More info
+            i.fa.fa-arrow-circle-right
