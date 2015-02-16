@@ -20,6 +20,8 @@ var app = new EmberApp({
 // modules that you would like to import into your application
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
-app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+app.import('vendor/admin-lte.css');
+app.import('vendor/admin-lte-blue.css');
+app.import('vendor/admin-lte.js');
 
 module.exports = app.toTree();
