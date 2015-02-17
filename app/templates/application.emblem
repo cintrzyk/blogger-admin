@@ -28,3 +28,6 @@ header.main-header
           a.small-box-footer href="#"
             ' More info
             i.fa.fa-arrow-circle-right
+    .row
+      .col-md-12
+        = outlet

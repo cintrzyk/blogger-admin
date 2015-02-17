@@ -1,0 +1,9 @@
+.table-responsive
+  table.table
+    thead
+      tr
+        th Name
+    tbody
+      each blog in model
+        tr
+          td = blog.name
