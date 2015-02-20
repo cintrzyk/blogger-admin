@@ -7,9 +7,7 @@ header.main-header
 
 .content-wrapper
   section.content-header
-    h1
-      | Dashboard
-      small Control panel
+    h1 = contentHeader
     ol.breadcrumb
       li
         a href="#"
@@ -17,17 +15,6 @@ header.main-header
       li.active Dashboard
 
   section.content
-    .row
-      .col-lg-3.col-xs-6
-        .small-box.bg-aqua
-          .inner
-            %h3 0
-            %p New Blogs
-          .icon
-            i.ion.ion-bag
-          a.small-box-footer href="#"
-            ' More info
-            i.fa.fa-arrow-circle-right
     .row
       .col-md-12
         = outlet
