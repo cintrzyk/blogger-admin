@@ -1,9 +1,10 @@
-.table-responsive
-  table.table
-    thead
-      tr
-        th Name
-    tbody
-      each blog in model
-        tr
-          td = blog.name
+.box-body
+  if isEmpty
+    p No blogs found.
+  else
+    .table-responsive
+      table.table
+        thead
+          tr
+            th Name
+        = view 'blogs/list' content=model
