@@ -1,5 +1,5 @@
-/*! AdminLTE app.js
- * ================
+/*! AdminLTE 2.0.1 app.js
+ * ======================
  * Main JS application file for AdminLTE v2. This file
  * should be included in all pages. It controls some layout
  * options and implements exclusive AdminLTE plugins.
@@ -22,12 +22,12 @@ if (typeof jQuery === "undefined") {
  *
  * @type Object
  * @description $.AdminLTE is the main object for the template's app.
- *				It's used for implementing functions and options related
- *				to the template. Keeping everything wrapped in an object
- *				prevents conflict with other plugins and is a better
- *				way to organize our code.
+ *        It's used for implementing functions and options related
+ *        to the template. Keeping everything wrapped in an object
+ *        prevents conflict with other plugins and is a better
+ *        way to organize our code.
  */
-$.AdminLTE = new Object();
+$.AdminLTE = {};
 
 /* --------------------
  * - AdminLTE Options -
@@ -54,7 +54,7 @@ $.AdminLTE.options = {
   BSTooltipSelector: "[data-toggle='tooltip']",
   //Enable Fast Click. Fastclick.js creates a more
   //native touch ecperience with touch devices. If you
-  //choose to enable the plugin, make sure you load the script 
+  //choose to enable the plugin, make sure you load the script
   //before AdminLTE's app.js
   enableFastclick: true,
   //Box Widget Plugin. Enable this plugin
@@ -138,7 +138,7 @@ $(function () {
   if (o.enableBoxWidget) {
     $.AdminLTE.boxWidget.activate();
   }
-  
+
   if(o.enableFastclick && typeof FastClick != 'undefined') {
     FastClick.attach(document.body);
   }
@@ -242,7 +242,7 @@ $.AdminLTE.pushMenu = function (toggleBtn) {
     $("body").toggleClass('sidebar-open');
   });
   $(".content-wrapper").click(function () {
-    //Enable hide menu when clicking on the content-wrapper on small screens    
+    //Enable hide menu when clicking on the content-wrapper on small screens
     if ($(window).width() <= 767 && $("body").hasClass("sidebar-open")) {
       $("body").removeClass('sidebar-open');
     }
@@ -305,7 +305,7 @@ $.AdminLTE.tree = function (menu) {
  *
  * @type Object
  * @usage $.AdminLTE.boxWidget.activate()
- *								Set all of your option in the main $.AdminLTE.options object
+ *                Set all of your option in the main $.AdminLTE.options object
  */
 $.AdminLTE.boxWidget = {
   activate: function () {
@@ -362,7 +362,7 @@ $.AdminLTE.boxWidget = {
  * This is a custom plugin to use with the compenet BOX. It allows you to add
  * a refresh button to the box. It converts the box's state to a loading state.
  *
- *	@type plugin
+ *  @type plugin
  * @usage $("#box-widget").boxRefresh( options );
  */
 (function ($) {
