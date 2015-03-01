@@ -8,11 +8,7 @@ header.main-header
 .content-wrapper
   section.content-header
     h1 = contentHeader
-    ol.breadcrumb
-      li
-        a href="#"
-          i.fa.fa-dashboard  Home
-      li.active Dashboard
+    = bread-crumbs tagName='ol' classNames='breadcrumb'
 
   section.content
     .row
